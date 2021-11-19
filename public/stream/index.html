@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>webtrc get</title>
+        <style>
+            .greyscale{
+                -webkit-filter: grayscale(1);
+                filter: grayscale(1);
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <label>音频输入</label>
+            <select id="audioSource"></select>
+        </div>
+        <div>
+            <label>音频输出</label>
+            <select id="audioOutput"></select>
+        </div>
+        <div>
+            <label>视频输入</label>
+            <select id="videoSource"></select>
+        </div>
+        <div>
+            <label>滤镜</label>
+            <select id="filter">
+                <option value="none">无</option>
+                <option value="greyscale">灰度</option>
+            </select>
+        </div>
+        <button id="screenshot">截图</button>
+        <canvas id="picture" style="height:200px;width:400px;"></canvas>
+        <video autoplay playsinline id="play"></video>
+        <video playsinline id="recplay"></video>
+        <button id="startrec">录制</button>
+        <button id="recplay-btn">播放录制</button>
+        <button id="download">下载</button>
+        <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+        <script type="text/javascript" src="./js/client.js"></script>
+    </body>
+
+</html>
